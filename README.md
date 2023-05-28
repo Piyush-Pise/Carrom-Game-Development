@@ -41,9 +41,7 @@ The Carrom game was developed using the following process:
 3. **Scene Setup:** I created a new scene in Unity and set up the game environment, including the board, pockets, and boundaries. I positioned the game elements, such as the striker and pucks, within the scene.
 4. **Drag and Release Mechanic:** I implemented the drag and release mechanic for controlling the striker's power and direction. This involved handling touch input, calculating the shot power based on the drag distance, and applying force to the striker upon release.
 5. **Physics Simulation:** I utilized Unity's physics engine to handle the interactions between the striker and pucks. I configured rigidbody components and colliders for accurate collision detection and response.
-6. **Boundary Bouncing:** I implemented boundary bouncing for both the striker and
-
- pucks to ensure they stay within the game board and respond realistically when hitting the boundaries.
+6. **Boundary Bouncing:** I implemented boundary bouncing for both the striker and pucks to ensure they stay within the game board and respond realistically when hitting the boundaries.
 7. **Scoring System:** I created a scoring system that increments the score when a puck is pocketed and awards additional points for pocketing the red queen. I integrated the scoring system with the user interface (UI) to display the current score.
 8. **Timer Implementation:** I added a timer to the game, set to 2 minutes. The timer counts down, and when it reaches zero, a "Game Over" banner is displayed, indicating the end of the game.
 9. **AI Functionality:** I implemented a basic AI opponent capable of taking simple shots. The AI analyzes the game state and makes decisions based on predefined rules and strategies.
