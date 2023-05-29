@@ -1,6 +1,6 @@
 # Nudge-Carrom-Project ReadMe
 
-This ReadMe document provides an overview of the Carrom game developed in Unity. It includes information about the game, its features, installation instructions, the development process, and other relevant details.
+This ReadMe document provides an overview of the Carrom game developed in Unity for Android devices. It includes information about the game, its features, installation instructions, the development process, and other relevant details.
 
 ## Game Description
 
@@ -10,7 +10,7 @@ The Carrom game is a single-player game designed to simulate the popular board g
 
 The Carrom game includes the following features:
 
-1. Drag and release mechanic to control the striker's power and direction.
+1. Drag and release mechanics to control the striker's power and direction.
 2. Realistic physics simulation for puck-striker collisions.
 3. Boundary bouncing for both the striker and pucks.
 4. Scoring system with points awarded for pocketing pucks and the red queen.
@@ -21,33 +21,47 @@ The Carrom game includes the following features:
 
 To install and run the Carrom game, follow these steps:
 
-1. Download the game assets from the following link: [Assets](https://drive.google.com/drive/folders/1IrjWe2swTRSlMy4zucnxs1S5XqMKnFK2?usp=share_link).
-2. Download and install Unity, preferably version [Unity 2019.4.24f1](https://unity3d.com/unity/whats-new/2019.4.24).
-3. Create a new Unity project.
+1. Create a new Unity project, preferably version Unity 2021.3.23f1.
+2. Go to the build settings and change the build settings to Android.
 4. Import the downloaded assets into the Unity project by copying them into the project's Assets folder.
-5. Open the scene named "CarromScene" from the project's Assets folder.
+5. Open the scene named "SampleScene" from the project's Assets folder.
 6. Set the scene aspect ratio to portrait orientation to optimize for mobile devices.
-7. Ensure the game is configured to target the desired platform (e.g., Android or iOS).
+7. Ensure the game is configured to target the desired platform (Android).
 8. Build and run the game on your target device or emulator.
 
 Note: Additional configurations may be required depending on your specific development environment.
 
 ## Development Process
 
-The Carrom game was developed using the following process:
+The Carrom game was developed using the Unity game engine version 2021.3.23f1 for Android devices. The development process involved the following steps:
 
-1. **Requirements Analysis:** I reviewed the given task requirements and identified the key elements, mechanics, and features required for the Carrom game.
-2. **Asset Integration:** I downloaded the provided game assets and imported them into the Unity project. This included the striker, black and white pucks, red queen, game board, and other required visual and audio assets.
-3. **Scene Setup:** I created a new scene in Unity and set up the game environment, including the board, pockets, and boundaries. I positioned the game elements, such as the striker and pucks, within the scene.
-4. **Drag and Release Mechanic:** I implemented the drag and release mechanic for controlling the striker's power and direction. This involved handling touch input, calculating the shot power based on the drag distance, and applying force to the striker upon release.
-5. **Physics Simulation:** I utilized Unity's physics engine to handle the interactions between the striker and pucks. I configured rigidbody components and colliders for accurate collision detection and response.
-6. **Boundary Bouncing:** I implemented boundary bouncing for both the striker and pucks to ensure they stay within the game board and respond realistically when hitting the boundaries.
-7. **Scoring System:** I created a scoring system that increments the score when a puck is pocketed and awards additional points for pocketing the red queen. I integrated the scoring system with the user interface (UI) to display the current score.
-8. **Timer Implementation:** I added a timer to the game, set to 2 minutes. The timer counts down, and when it reaches zero, a "Game Over" banner is displayed, indicating the end of the game.
-9. **AI Functionality:** I implemented a basic AI opponent capable of taking simple shots. The AI analyzes the game state and makes decisions based on predefined rules and strategies.
-10. **Testing and Refinement:** I extensively tested the game, ensuring that the mechanics, physics, scoring, and AI functionality work as intended. I addressed any bugs, issues, or inconsistencies that arose during testing.
-11. **Optimization and Scalability:** I optimized the game for portrait screen orientation and made sure it can run smoothly on various devices with different screen sizes and resolutions.
-12. **Documentation and Submission:** I created the ReadMe document, recorded a video showcasing the game, and prepared the code repository for submission.
+1. **Requirements Analysis:** Reviewed the task requirements and identified the key elements, mechanics, and features required for the Carrom game. Decided to develop a 2D game for Android mobile platforms.
+
+2. **Asset Integration:** Downloaded the provided game assets and imported them into the Unity project. This included the striker, black and white pucks, red queen, game board, and other required visual and reference videos.
+
+3. **Scene Setup:** Created a new scene in Unity and set up the game environment, including the board, pockets, pucks, and boundaries. Positioned, scaled, and parented the elements properly. Added components like 2D colliders and Rigidbody2D. Set up UI elements such as the 2-minute timer, score text, countdown timers for each player, and a striker bar slider.
+
+4. **Conceptualizing the Game:** Figured out how the gameplay should look and broke it down into different states. Developed states such as Idle state, charge state, free state, score UI update state, and game end state. This helped in coding the game logic more easily.
+
+5. **Programming:** Utilized the finite state machine (FSM) programming pattern to handle the different states of the game and their corresponding logic. This improved code organization and scalability.
+
+6. **Drag and Release Mechanic:** Implemented the drag and release mechanic to control the striker's power and direction based on a UI slider. Handled touch input, calculated the shot power based on the drag distance, and applied force to the striker upon release.
+
+7. **Physics Simulation:** Utilized Unity's physics engine to handle the interactions between the striker, pucks, and the board. Configured rigid body components and colliders for accurate collision detection and response.
+
+8. **Boundary Bouncing:** Implemented boundary bouncing using a polygon collider for the carrom board to ensure that the striker and pucks stay within the game board and respond realistically when hitting the boundaries. Created a script that simulates friction force on the pucks and the striker.
+
+9. **Scoring System:** Created a scoring system that increments the score when a puck is pocketed and awards additional points for pocketing the red queen. Integrated the scoring system with the user interface (UI) to display the current score.
+
+10. **Timer Implementation:** Programmed a timer for the game using Coroutines, set to 2 minutes, and integrated it with the corresponding UI text element. The timer counts down, and when it reaches zero, a "Game Over" banner is displayed, indicating the end of the game.
+
+11. **AI Functionality:** Implemented a primary AI opponent capable of taking simple shots. The AI analyzes the game state and makes decisions based on predefined rules and strategies. The AI strategy involves calculating a potential position for the striker, where the striker, puck, and pocket are aligned in a straight line. The shot power is then determined based on the distance between the puck and the striker. In cases where no such position exists, the AI randomly selects a position for the striker and applies a random force for the shot.
+
+12. **Testing and Refinement:** Extensively tested the game to ensure that the mechanics, physics, scoring, and AI functionality worked as intended. Addressed any bugs, issues, or inconsistencies that arose during testing.
+
+13. **Optimization and Scalability:** Optimized the game for portrait screen orientation and ensured smooth performance on various devices with different screen sizes and resolutions.
+
+14. **Documentation and Submission:** Created the ReadMe document, recorded a video showcasing the game, and prepared the code repository for submission.
 
 ## Controls
 
@@ -67,8 +81,8 @@ The source code for the Carrom game can be accessed from the following GitHub re
 
 ## Credits
 
-The Carrom game was developed by [Your Name]. It utilizes the provided assets and references to create an engaging single-player Carrom experience in Unity.
+The Carrom game was developed by Piyush Narhari Pise. It utilizes the provided assets and references to create an engaging single-player Carrom experience in Unity.
 
-If you have any questions or feedback, please contact [Your Email Address].
+If you have any questions or feedback, please raise issues in the repository.
 
 Thank you for playing the Carrom game!
