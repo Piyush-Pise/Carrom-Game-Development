@@ -59,11 +59,11 @@ The controls for the Carrom game are as follows:
 
 ## Video Showcase
 
-A video showcasing the Carrom game can be found at the following link: [Video Showcase](insert_video_link_here)
+A video showcasing the Carrom game can be found at the following link: [Video Showcase][]
 
 ## Repository
 
-The source code for the Carrom game can be accessed from the following GitHub repository: [Carrom Game Repository](insert_github_repository_link_here)
+The source code for the Carrom game can be accessed from the following GitHub repository: [Nudge Carrom Game][(https://github.com/Piyush-Pise/Nudge-Carrom-Project)]
 
 ## Credits
 
