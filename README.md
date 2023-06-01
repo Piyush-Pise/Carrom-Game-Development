@@ -1,5 +1,5 @@
 # Nudge Carrom Project ReadMe
-https://github.com/Piyush-Pise/Nudge-Carrom-Project/assets/75115056/ec7de8f5-2800-4b49-9750-429f6f515163
+
 This ReadMe document provides an overview of the Carrom game developed in Unity for Android devices. It includes information about the game, its features, installation instructions, the development process, and other relevant details.
 
 ## Game Description
