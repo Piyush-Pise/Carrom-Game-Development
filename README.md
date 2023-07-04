@@ -1,4 +1,4 @@
-# Carrom Game Development with Unity | C# ReadMe
+# Carrom Game Development with Unity | C# | ReadMe
 ![Start Of the Game - Made with Clipchamp (1)](https://github.com/Piyush-Pise/Nudge-Carrom-Project/assets/75115056/db4a9467-1acf-4db5-ac96-805812b8f720)
 This ReadMe document provides an overview of the Carrom game developed in Unity for Android devices. It includes information about the game, its features, installation instructions, the development process, and other relevant details.
 
